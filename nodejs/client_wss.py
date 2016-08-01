@@ -12,7 +12,7 @@ if bSecure:
 
 	publicKeyCertLocation = 'scert.crt'
 	opts = {'ca_certs': publicKeyCertLocation, 'cert_reqs': ssl.CERT_REQUIRED, }
-	ws = create_connection("wss://10.16.220.14:3000/", sslopt=opts)
+	ws = create_connection("wss://127.0.0.1:3000/", sslopt=opts)
 else:
 
 	ws = create_connection("ws://localhost:3000/")

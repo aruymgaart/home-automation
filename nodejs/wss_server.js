@@ -28,8 +28,6 @@ var httpServ = (cfg.ssl) ? require('https') : require('http');
 var processRequest = function(request, response) 
 {
 	console.log(req);
-        res.writeHead(200);
-        res.end("All glory to WebSockets!\n");
 };
 
 console.log("create server");
