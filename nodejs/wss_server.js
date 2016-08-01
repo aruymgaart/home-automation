@@ -1,4 +1,11 @@
-//=== iped nodejs iped-echo example server, ap ruymgaart, www.texansmarthome.com, based on various web examples
+//= iped nodejs iped-echo example server, ap ruymgaart, www.texansmarthome.com, based on various web examples
+//= must have nodejs and 
+//= sudo apt-get install nodejs
+//= sudo apt-get install npm
+//= sudo npm install websocket
+//= key and certificate are expected in the same folder. generate as follows:
+//= sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout skey.key -out scert.crt
+//= if you just want to echo anything, comment out iped stuff
 
 console.log("importing iped");
 var iped = require('./iped');
@@ -9,7 +16,8 @@ var fs = require('fs');
 var server = null;
 
 var webSocketServer = require('websocket').server;
-var cfg = {
+var cfg = 
+{
     ssl: true,
     port: 3000,
     ssl_key: 'skey.key',
